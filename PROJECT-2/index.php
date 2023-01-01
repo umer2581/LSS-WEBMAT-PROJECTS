@@ -113,7 +113,7 @@
                 <div class="cnews">
                     <div class=cheading> 
                         Latest News
-                    </div>
+                    </div> 
                     <div class="cncont">
                         <marquee direction="up" scrolldelay="10" onmouseover=this.stop(); onmouseout="this.start();">
                             <ul class="latest-news-ul">
