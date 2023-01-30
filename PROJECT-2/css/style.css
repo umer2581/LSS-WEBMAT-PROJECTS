@@ -845,7 +845,7 @@ red
             width: 582px;
             background-color: aliceblue;
             float: left;
-            font-family: roboto;
+            font-family: roboto; 
             padding-top: 6px; 
             box-sizing: border-box;
             border: 1px solid black;
