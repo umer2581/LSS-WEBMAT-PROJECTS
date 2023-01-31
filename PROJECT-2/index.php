@@ -104,7 +104,7 @@
                     if (counter > 7) {
                         counter = 1;
                     }
-                }, 5000);
+                }, 5000); 
 
             </script>
 
