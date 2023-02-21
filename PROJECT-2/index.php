@@ -105,6 +105,7 @@
                         counter = 1;
                     }
                 }, 5000);
+                    
             </script>
 
             <!-- Content Area -->
