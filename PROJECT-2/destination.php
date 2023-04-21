@@ -1,3 +1,8 @@
+<?php
+include('admin/config/connection.php');
+$sql = "select * from destination";
+$result = mysqli_query($conn, $sql);
+?>
 <html>
 
 <head>
@@ -40,14 +45,19 @@
 
             </div>
             <!-- Content Area -->
-            <div class="scontainer">
-                
-                <div class="sleft">
-                    
-
-
+            <div class="scontainer-destination">
+                <div class="trow">
+                    <div class="th1"> STATION </div>
+                    <div class="th2">TRANSIT TIME(HRS)</div>
+                    <?php
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $STATION = $row["station"];
+                        $TRANSIT = $row["transit-time"];
+                        echo "<div class='tleft'>$STATION</div><div class='tright'>$TRANSIT</div>";
+                    }
+                    ?>
                 </div>
-                <div class="sright"></div>
+
 
             </div>
 

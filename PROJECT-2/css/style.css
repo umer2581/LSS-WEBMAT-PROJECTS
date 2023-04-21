@@ -797,6 +797,72 @@ red
             align-items: center;
             justify-content:space-around;
         }
+        .scontainer-destination
+        {
+            min-height: 700px;
+            width: 1200px;
+            /* margin: 0 auto; */
+            /* background-color: cornflowerblue; */
+            background-color: white;
+            padding: 10px 0 10px 30px;
+            align-items: center;
+            justify-content:space-around;
+        }
+        .trow{
+            width: 1200px;
+            text-align: center;
+            margin-top: 50px;
+      
+
+        }
+        .th1{
+            height: 30px;
+            width: 582px;
+            background-color: black;
+            float: left;
+            color: white;
+            font-weight: bold;
+            padding-top: 6px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            border-bottom: none;
+        }
+        .th2{
+            height: 30px;
+            width: 582px;
+            color: white;
+            font-weight: bold;
+            background-color: black;
+            font-family: roboto;
+            float: left;
+            padding-top: 6px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            border-bottom: none;
+        }
+        .tleft{
+            height: 30px;
+            width: 582px;
+            background-color: aliceblue;
+            float: left;
+            font-family: roboto;
+            padding-top: 6px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            
+        }
+        
+        .tright{
+            height: 30px;
+            width: 582px;
+            background-color:aliceblue;
+            float: left;
+            font-family: roboto;
+            padding-top: 6px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            
+        }
         .sleft
         {
             min-height:500px ;
