@@ -107,8 +107,6 @@
                 }, 5000); 
 
             </script>
-            
-
             <!-- Content Area -->
             <div class="contentarea">
                 <h3 class="h3">Our Gallery</h3><br>
