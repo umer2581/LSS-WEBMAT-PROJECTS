@@ -1,0 +1,162 @@
+body
+{
+	background-color:#ddd;
+	margin:0px;
+}
+.outer
+{
+	width:1200px;
+	background-color:#ccc;
+	margin:0 auto;
+}
+.header
+{
+	width:1200px;
+	height:150px;
+	background-color:#009;
+}
+
+.hleft
+{
+	width:100px;
+	height:100px;
+	background-color:#fff;
+	float:left;
+	margin:25px 0px 0px 50px;
+	border-radius:50%;
+	transition:5s;
+}
+.hleft:hover{
+	margin:25px 0 0 100px;
+	transition:5s;
+}
+.hright
+{
+	width:600px;
+	height:100px;
+	background-color:#fff;
+	float:right;
+	margin:25px 50px 0 0;
+	border-radius:15px;
+	font-size:40px;
+	text-align:center;
+	transition:2s;
+}
+.hright:hover
+{
+ background-color:bb0;
+color:red;
+padding-top:10px;
+box-sizing:border-box;
+transition: 2s; 
+}
+.menubar{
+			width:1200px;
+			height:50px;
+			background-color:#fff;	
+		}
+		.menus
+		{
+			width:150px;
+			height:40px;
+			float:left;
+			background-color:#009;
+			margin:5px 0 0 40px;
+			border-radius:5px;
+			color:#fff;
+			text-align:center;
+			font-size:18px;
+			padding-top:10px;
+			box-sizing:border-box;
+		}
+		.menus:hover
+		{
+			background-color:#ff9;
+			color:red;
+		}
+		.slider
+		{
+			width:1200px;
+			height:300px;
+			background-color:#eee;
+		}
+		.main
+		{
+			width:1200px;
+
+			background-color:#fff;
+			float:left;	
+			}
+		.mleft
+		{
+			width:250px;
+			height:450px;
+			background-color:#fff;
+			float:left;
+		}
+		.lmenus
+		{
+			width:150px;
+			height:40px;
+			background-color:#009;
+			margin:30px 50px; 
+			color:#fff;
+			text-align:center;
+			padding-top:10px;
+			box-sizing:border-box;
+		}
+		.lmenus:hover{
+			background-color:#000;
+			margin:30px 0px 30px 70px;
+			border-radius:10px;			
+		}
+		red
+		{
+			color:red;
+		}
+		.mright
+		{
+			width:950px;
+			min-height:450px;
+			background-color:#fff;
+			float:left;
+			text-align:justify;
+			padding:30px 15px;
+			box-sizing:border-box;
+			border-left: dotted 1px #000;
+		}
+		.footer
+		{
+			width:1200px;
+			height:100px;
+			background-color:#009;
+			clear:both;   
+            margin: 10px 0 0 0;
+            padding-left: 350px;
+            box-sizing: border-box;
+		}
+       
+.foptions{
+    width:150px;
+			height:40px;
+            width: 100px;
+			margin:20px 0 0 30px;
+			color:#fff;
+			text-align:center;
+			padding-top:10px;
+			box-sizing:border-box;
+            float: left;
+            border-right: white solid 1px;
+            font-size: large;
+		}
+       a{
+        text-decoration: none;
+       }
+       .gallery{
+        background-color: gray;
+        height: 170px;
+        width: 250px;
+        margin:10px 0 0 40px;
+        float: left;
+
+       }
