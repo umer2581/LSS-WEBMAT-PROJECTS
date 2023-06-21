@@ -211,3 +211,10 @@ li {
 .brdr {
   border-left: 2px black solid;
 }
+.admin-main{
+width: 800px;
+height: 500px;
+background-color: red;
+margin: 50px auto;
+border-radius: 30px;
+}
