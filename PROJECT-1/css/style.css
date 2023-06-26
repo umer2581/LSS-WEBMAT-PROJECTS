@@ -212,9 +212,9 @@ li {
   border-left: 2px black solid;
 }
 .admin-main{
-width: 800px;
+width: 600px;
 height: 500px;
-background-color: red;
+background-color:black;
 margin: 50px auto;
 border-radius: 30px;
 }
