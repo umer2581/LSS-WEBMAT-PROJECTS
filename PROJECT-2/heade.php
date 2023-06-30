@@ -3,11 +3,11 @@
         <title> Profile</title>
         <link href="css/style.css" rel="stylesheet">
         <link href="css/bootstrap-icons.css" rel="stylesheet">
-    </head>
+    </head> 
     <body>
         <!-- Top-Header Start -->
-        <div class="outer">
-            <div class="htop">
+        <div class="outer"> 
+            <div class="htop"> 
                 <div class="htleft"> NEWS</div>
                 <div class="htcenter"> <marquee class="marquee"> 
                     OTP FRAUD AWARENESS PUBLIC NOTICE (6-MAY-2023)
