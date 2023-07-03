@@ -7,31 +7,26 @@
     <body>
         <!-- Top-Header Start -->
         <div class="outer">
-            <div class="htop">
-            <?php
-            // htop will be here
-            include("htop.php");
-            ?>
-                    </div>
-                    <!-- Top-Header End -->
-                    
-                    <!-- Header Start -->
-                    <div class="header">
-                        <div class="hleft" ><img class="img"src="images/logo1.gif" height="100%" width="100%">
-                        </div>
-                        
-                       
-
-
-                    </div>
-
-                        <!-- Menubar Start -->
-                        <div class="menubar" style="background-image: url('images/mback.avif');">
+                    <div class="htop">
                         <?php
-                // Menus will be here
-                include("menubar.php");
-                ?>
+                        // htop will be here
+                        include("htop.php");
+                        ?>
                         </div>
+                        <!-- Header Start -->
+                        <div class="header">
+                            <?php
+                            include("header.php");
+                            ?>
+                        </div>
+
+                         <!-- Menubar Start -->
+                            <div class="menubar" style="background-image: url('images/mback.avif');">
+                                
+                                <?php
+                                // Menus will be here
+                                include("menubar.php");
+                                ?>
                         <!-- Menubar End -->
 
                         <!-- Slider Start  -->

@@ -7,30 +7,30 @@
 </head>
 
 <body>
-    <!-- Outer Start -->
-    <div class="outer">
-        <div class="htop">
-            <?php
-            // htop will be here
-            include("htop.php");
-            ?>
-        </div>
-        <!-- Header Start -->
-        <div class="header">
-            <?php
-            include("header.php");
-            ?>
-        </div>
+         <!-- Outer Start -->
+          <div class="outer">
+                <div class="htop">
+                        <?php
+                        // htop will be here
+                        include("htop.php");
+                        ?>
+                        </div>
+             <!-- Header Start -->
+                        <div class="header">
+                            <?php
+                            include("header.php");
+                            ?>
+                        </div>
 
-        <!-- Menubar Start -->
-        <div class="menubar" style="background-image: url('images/mback.avif');">
-
-            <?php
-            // Menus will be here
-            include("menubar.php");
-            ?>
-            <!-- Menubar End -->
-
+                         <!-- Menubar Start -->
+                         <div class="menubar" style="background-image: url('images/mback.avif');">
+                
+                              <?php
+                                // Menus will be here
+                                include("menubar.php");
+                                ?>
+                                
+                        <!-- Menubar End -->
             <!-- Slider Start  -->
             <div class="slider">
                 <img src="images/network.jpg" alt="" height=432px width=1200px>
