@@ -1,71 +1,120 @@
-
+<!DOCTYPE html>
 <html>
-        <head> 
-            <title> Admin Page</title>
-            <style>
-                body
-                {
-                    background-color:aliceblue;
-                    
-                }
-                .passwordblock
-                {
-                    height: 400px;
-                    width: 500px;
-                    background-color:blue;
-                    margin: 0 auto;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                   background-image:linear-gradient(#2ec4b6,#cbf3f0);
-                  
-                }
-                b
-                {
-                    font-size:25px;
-                    font-weight: bold;
-                    font-family:Verdana, Geneva, Tahoma, sans-serif;
-                    /* align-items: center; */
-                    margin-left: 39px;
-                    
-                    /* margin-top: 50px; */
-                    /* padding-bottom: 30px; */
-                    /* justify-content: center; */
-                }
-                .unameinput
-                {   
-                    /* gap:50px; */
-                    font-size: 25px;
-                    margin-left: 40px;
-                    margin-top: 7px;
-                    box-sizing: border-box;
-                    /* text-align: center; */
-                }
-                .btn
-                {
-                    font-size: 25px;
-                    margin: 20px 170px;
-                    text-align: center;
-                    color: fff;
-                    background-image: linear-gradient(#003459,#4d194d);
-                }
-                
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
 
+    .login-container {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      padding: 40px;
+      width: 400px;
+      max-width: 90%;
+    }
 
-            </style>
-        </head>
-        <body>
-            <div class="passwordblock">
-                <form method="post" >
-                    <b>Username:-</b><br>
-                    <input type="text" class="unameinput" name="uname" required><br>
-                    <b>Password:-</b><br>
-                    <input type="password" class="unameinput" name="upass" required><br>
-                    
-                    <input type="submit" class="btn" name="submit" value="Login">                                               
+    .login-logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-                </form>
-            </div>
+    .login-logo img {
+      max-width: 150px;
+      border-radius: 10px;
+    }
 
-        </body>
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid #999;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .form-group i.fa {
+      position: absolute;
+      margin-top: 12px;
+      margin-left: 10px;
+      color: #999;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group input[type="password"]:focus {
+      border-bottom: 1px solid #667eea;
+    }
+
+    .form-group.checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .form-group.checkbox label {
+      font-weight: normal;
+      margin-left: 10px;
+    }
+
+    .form-group button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #667eea;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #764ba2;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-logo">
+      <img src="images/mbus courier.gif" alt="Logo">
+    </div>
+    <form action="login.php" method="post">
+      <div class="form-group">
+        <i class="fas fa-user fa-lg"></i>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <i class="fas fa-lock fa-lg"></i>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </div>
+      <div class="form-group checkbox">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember me</label>
+      </div>
+      <div class="form-group">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+</body>
 </html>
