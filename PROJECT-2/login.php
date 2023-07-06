@@ -101,19 +101,19 @@
     <form action="login.php" method="post">
       <div class="form-group">
         <i class="fas fa-user fa-lg"></i>
-        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="text" id="username" name="username" placeholder="Username" >
       </div>
       <div class="form-group">
         <i class="fas fa-lock fa-lg"></i>
-        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="password" id="password" name="password" placeholder="Password">
       </div>
       <div class="form-group checkbox">
         <input type="checkbox" id="remember" name="remember">
         <label for="remember">Remember me</label>
       </div>
       <div class="form-group">
-        <button type="submit">Login</button>
-      </div>
+      <a href="dashboard/index.html">  <button type="submit">Login</button> 
+      </div></a>
     </form>
   </div>
 </body>

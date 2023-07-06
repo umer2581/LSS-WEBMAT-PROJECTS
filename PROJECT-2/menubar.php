@@ -10,7 +10,7 @@
                 <a href="network.php">
                     <div class="menus">Network</div>
                 </a>
-                <a href="#">
+                <a href="destination.php">
                     <div class="menus">Destination</div>
                 </a>
                 <a href="#">

@@ -1,0 +1,111 @@
+.header {
+    background-color: red;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.track-shipment {
+    color: white;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    padding-right: 20px;
+}
+
+.track-shipment::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+/* Menu Bar Styles */
+.menu-bar {
+    width: 200px;
+    height: 600px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    border-right: black solid 2px;
+line-height: 30px;
+}
+
+.menu-bar .logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu-bar .logo img {
+    width: 100px;
+    border-radius: 20px;
+    background-color: black;
+
+    
+}
+
+.menu-bar hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+    
+}
+
+.menu-bar .menu-list {
+    padding-top: 10px;
+    
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-bar li {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-right: 2px solid transparent;
+}
+
+.menu-bar li:hover {
+    background-color: red;
+    color: white;
+}
+
+
+.menu-bar .dropdown-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.menu-bar .submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1;
+    color: black;
+}
+
+.menu-bar .submenu li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Font Awesome Icons */
+.fa {
+    margin-right: 5px;
+}
