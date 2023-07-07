@@ -24,11 +24,10 @@ $result = mysqli_query($conn, $sql);
 
         <!-- Header Start -->
         <div class="header">
-            <div class="hleft"><img class="img" src="images/logo1.gif" height="100%" width="100%">
-            </div>
-
-
-        </div>
+      <?php
+      include("header.php");
+      ?>
+    </div>
 
         <!-- Menubar Start -->
         <div class="menubar">

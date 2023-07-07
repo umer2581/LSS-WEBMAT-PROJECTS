@@ -976,3 +976,141 @@ red
     margin: 0 auto;
     display: flex;
 }
+/* Contact us page css starts here */
+.contactmain{
+    height: auto;
+    width: 1200px;
+    background-color: #fff;
+    float: left;
+}
+.contactusouter{
+
+    height: 284px;
+    width: 1110px;
+    /* background-color: #999; */
+    margin: 32px 45px;
+    
+}
+.contactbox{
+
+    height: 276px;
+    width: 344px;
+    background-image: linear-gradient(to right,#f4e6f1,#f3a0d7,#b3e8f7);
+    margin-left: 18px;
+    float: left;
+    border-radius: 12px;
+    border:2px solid #a106f4;
+    overflow: hidden;
+}
+.contacthead{
+    height: 76px;
+    width: 352px;
+    /* background-color: aqua; */
+    padding-top: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+}
+.caddress{
+    height: 99px;
+    width: 352px;
+    /* background-color: #d7ebeb; */
+    margin-top: 3px;
+    font-size: 15px;
+    color:#242acf;
+
+}
+cs{
+    font-weight: 600;
+}
+.caddright{
+    height:99;
+    width: 310;
+    /* background-color:chartreuse; */
+    float:left;
+    font-size: 16px;
+    text-align: justify;
+    padding-top: 3px;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.ctelephone{
+    height: 53px;
+    width: 352px;
+    margin-top: 3px;
+    /* background-color: #f4afe9; */
+    color:#242acf;
+}
+.ctellright{
+    height:53;
+    width: 310;
+    /* background-color:chartreuse; */
+    float:left;
+    font-size: 16px;
+    text-align: justify;
+    padding-top: 9px;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+.cemail{
+    height: 36px;
+    width: 352px;
+    /* background-color: #fc9f32; */
+    margin-top: 3px;
+    color:#242acf;
+}
+.ceright{
+    height:36;
+    width: 310;
+    /* background-color:chartreuse; */
+    float:left;
+    font-size: 16px;
+    text-align: justify;
+    padding-top: 5px;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+.boota
+{
+    color: #1a2766;
+    font-size: 29px;
+    height: 99;
+    width: 38;
+    float: left;
+}
+.boott
+{
+    /* background-color: #40d3dc; */
+    color: #1a2766;
+    font-size: 29px;
+    height: 53;
+    width: 38;
+    float: left;
+}
+.boote
+{
+    /* background-color: #40d3dc; */
+    color: #1a2766;
+    font-size: 29px;
+    height: 36;
+    width: 38;
+    float: left;
+}
+.pa
+{
+    padding:31px 7px;
+    box-sizing: border-box;
+}
+.pt
+{
+    padding:6px 7px;
+    box-sizing: border-box;
+}
+.pe
+{
+    padding:0px 7px;
+    box-sizing: border-box;
+}

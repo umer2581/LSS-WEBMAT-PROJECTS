@@ -13,7 +13,7 @@
                 <a href="destination.php">
                     <div class="menus">Destination</div>
                 </a>
-                <a href="#">
+                <a href="contactus.php">
                     <div class="menus">Contact Us</div>
                 </a>
                 <a href="login.php">
