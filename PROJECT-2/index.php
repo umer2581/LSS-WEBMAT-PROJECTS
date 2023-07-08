@@ -272,7 +272,7 @@
 
     </div>
 
-    <div class="footer" style="background-image: url('images/fback3.jpg');">
+    <div class="footer" style="background-image: url('images/fback3.jpg'); opacity:100px">
         <?php
         //   Footer will be here
         include("footer.php");

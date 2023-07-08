@@ -676,6 +676,7 @@ nheading
 {
     background-color: #bbb;
     background-position: center;
+    opacity: 100px;
 }
 .fcontainer
 {
@@ -756,6 +757,7 @@ u
     font-weight: bolder;
     border-bottom: 2px solid cyan;
     cursor: pointer;
+    color: #fc9f32;
 }
 h4
 {
@@ -773,6 +775,7 @@ red
     width: 120px;
     border-radius: 5px;
     background-color: chartreuse;
+    color: floralwhite;
     position: relative;
     right: -950px;
     top: 30px;
@@ -995,11 +998,11 @@ red
 
     height: 276px;
     width: 344px;
-    background-image: linear-gradient(to right,#f4e6f1,#f3a0d7,#b3e8f7);
+    background-image: linear-gradient(to right,aliceblue,lightblue,aliceblue);
     margin-left: 18px;
     float: left;
     border-radius: 12px;
-    border:2px solid #a106f4;
+    border:2px solid black;
     overflow: hidden;
 }
 .contacthead{
@@ -1009,7 +1012,7 @@ red
     padding-top: 10px;
     box-sizing: border-box;
     margin-top: 10px;
-    font-family: sans-serif;
+    font-family: roboto;
     font-weight: 800;
     font-size: 20px;
     text-align: center;
@@ -1019,8 +1022,9 @@ red
     width: 352px;
     /* background-color: #d7ebeb; */
     margin-top: 3px;
+    line-height: 20px;
     font-size: 15px;
-    color:#242acf;
+    font-family: roboto;
 
 }
 cs{
@@ -1028,7 +1032,7 @@ cs{
 }
 .caddright{
     height:99;
-    width: 310;
+    width: 290;
     /* background-color:chartreuse; */
     float:left;
     font-size: 16px;
@@ -1042,7 +1046,7 @@ cs{
     width: 352px;
     margin-top: 3px;
     /* background-color: #f4afe9; */
-    color:#242acf;
+    color:#cf8b24;
 }
 .ctellright{
     height:53;
@@ -1113,4 +1117,9 @@ cs{
 {
     padding:0px 7px;
     box-sizing: border-box;
+}
+    a{
+    color:#1ba570;
+    text-decoration: none;
+    text-decoration-line: none;
 }

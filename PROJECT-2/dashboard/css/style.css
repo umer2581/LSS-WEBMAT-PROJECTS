@@ -1,35 +1,78 @@
-.header {
-    background-color: red;
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
+body{
+    margin: 0px;
 
+    
+}
+.outer{
+    background-color:aliceblue;
+    margin: 0 auto;
+    height: auto;
+    width: 1200px;
+    
+}
+.header{
+    background-color: red;
+    width: 1200px;
+    height:40px;
+
+    
+
+}
+.track-btn {
+    height: 40px;
+    margin-right: 25px;
+    box-sizing: border-box;
+    float: right;
+    color: white;
+    width: 220px;
+}
 .track-shipment {
     color: white;
     text-decoration: none;
-    font-family: 'Arial', sans-serif;
-    position: relative;
-    padding-right: 20px;
+    font-family: roboto;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bolder;
+
 }
 
 .track-shipment::after {
     content: "\f054";
     font-family: "Font Awesome 5 Free";
     font-weight: bold;
-    position: absolute;
+    margin-left: 5px;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
 }
 /* Menu Bar Styles */
-.menu-bar {
-    width: 200px;
+.main{
+height: 600px;
+width: 1200px;
+}
+.mleft
+{
+    background-color:black;
+    float: left;
     height: 600px;
-    background-color: white;
+    width: 220px;
+}
+.mright
+{
+    background-color:blue;
+    box-sizing: border-box;
+    float: left;
+    height: 600px;
+    width: 980px;
+    box-sizing: border-box;
+}
+
+.menu-bar {
+    width: 220px;
+    height: 600px;
+    background-color: aliceblue;
     color: black;
-    padding: 10px;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
     border-right: black solid 2px;
 line-height: 30px;
@@ -38,6 +81,7 @@ line-height: 30px;
 .menu-bar .logo {
     text-align: center;
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .menu-bar .logo img {
@@ -109,3 +153,34 @@ line-height: 30px;
 .fa {
     margin-right: 5px;
 }
+.dbname{
+    width: 200px;
+    /* background-color: red; */
+    height: 60px;
+    margin: 15px 0 0 20px;
+}
+.dname{
+    font-size: 28px;
+    font-family: roboto;
+    font-weight: bolder;
+    color: black;
+    padding: 10px 0 0 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.main-boxes{
+    width: 920px;
+    height: 150px;
+    background-color: red;
+    margin: 30px 0 0 25px;
+}
+.boxes{
+    height: 130px;
+    width: 200px;
+    float: left;
+    background-color: pink;
+    margin: 10px 0 15px 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
