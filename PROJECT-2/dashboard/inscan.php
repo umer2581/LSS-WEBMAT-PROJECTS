@@ -60,8 +60,8 @@
                 </div>
                 <div class="input2-main">
                     <div class="main2">
-                        <div class="m2-left"> 
-                        <div class="m2-boxes"> Customer Name<br> <input type="text"
+                        <div class="m2-left">
+                            <div class="m2-boxes"> From Customer<br> <input type="text"
                                     style="width:140px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                             </div>
                             <div class="m2-boxes">Address <br> <input type="text"
@@ -88,7 +88,7 @@
                                 <input type="text" maxlength="10"
                                     style="width:143px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;  margin-left:5px">
                             </div>
-       
+
                         </div>
                         <div class="m2-right">
                             <div class="m2-boxes">Consignee Name<br> <input type="text"
@@ -118,17 +118,99 @@
                                 <input type="text" maxlength="10"
                                     style="width:143px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;  margin-left:15px">
                             </div>
+
                         </div>
+
                     </div>
 
+                    <div class="main3">
+                        <div class="m3-left">
+                            <div class=>Code / Name (Destination) <br> <input type="text"
+                                    style="width:440px; height:20px; margin-top:10px; border-radius:5px;">
+                            </div>
+                            <div class="m3-boxes">
+                                <div class="m3-boxes">Act Wt<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                </div>
+                            </div>
+                            <div class="m3-boxes">
+                                <div class="m3-boxes">Vol Wt<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                </div>
+                            </div>
+                            <div class="m3-boxes">
+                                <div class="m3-boxes">Chg Wt<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                </div>
+                            </div>
+                            <div class="m3-boxes">
+                                <div class="m3-boxes">Topay<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                </div>
+                            </div>
+                            <div class="m3-boxes">
+                                <div class="m3-boxes">RiskBy [N/C/O]<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                </div>
+                            </div>
+                            <div class="m3-boxes">
+                                <div class="m3-boxes">Amount<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="m3-right">
+                            <div class="m3-boxes">
+                            <div class="m3-boxes">Pcs<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                </div>
+                                
+                            </div>
+                            <div class="m3-boxes">
+                            <div class="m3-boxes">VolSize (Y/N)
+<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                </div>
+                                
+                            </div>
+                            <div class="m3-boxes">
+                            <div class="m3-boxes">COD<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                </div>
+                                
+                            </div>
+                            <div class="m3-boxes">
+                            <div class="m3-boxes">Other Chg	<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                </div>
+                                
+                            </div>
+                            <div class="m3-boxes">
+                            <div class="m3-boxes">Chg Amount<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                </div>
+                                
+                            </div>
+                            <div class="m3-boxes">
+                            <div class="m3-boxes">Remarks<br> <input type="text"
+                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:10px;">
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+
+
                 </div>
+
             </div>
-
         </div>
-
-    </div>
-    </div>
-    <!--Outer end-->
+        <!--Outer end-->
 </body>
 
 </html>
