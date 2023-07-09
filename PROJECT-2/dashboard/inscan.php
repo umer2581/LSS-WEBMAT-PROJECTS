@@ -163,46 +163,49 @@
                         </div>
                         <div class="m3-right">
                             <div class="m3-boxes">
-                            <div class="m3-boxes">Pcs<br> <input type="text"
+                                <div class="m3-boxes">Pcs<br> <input type="text"
                                         style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                                 </div>
-                                
+
                             </div>
                             <div class="m3-boxes">
-                            <div class="m3-boxes">VolSize (Y/N)
-<br> <input type="text"
+                                <div class="m3-boxes">VolSize (Y/N)
+                                    <br> <input type="text"
                                         style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                                 </div>
-                                
+
                             </div>
                             <div class="m3-boxes">
-                            <div class="m3-boxes">COD<br> <input type="text"
+                                <div class="m3-boxes">COD<br> <input type="text"
                                         style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                                 </div>
-                                
+
                             </div>
                             <div class="m3-boxes">
-                            <div class="m3-boxes">Other Chg	<br> <input type="text"
+                                <div class="m3-boxes">Other Chg <br> <input type="text"
                                         style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                                 </div>
-                                
+
                             </div>
                             <div class="m3-boxes">
-                            <div class="m3-boxes">Chg Amount<br> <input type="text"
+                                <div class="m3-boxes">Chg Amount<br> <input type="text"
                                         style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                                 </div>
-                                
+
                             </div>
                             <div class="m3-boxes">
-                            <div class="m3-boxes">Remarks<br> <input type="text"
+                                <div class="m3-boxes">Remarks<br> <input type="text"
                                         style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:10px;">
                                 </div>
-                                
+
                             </div>
-                            
+
                         </div>
 
                     </div>
+                    <button class="red-button">Update</button>
+  <button class="red-button">Cancel</button>
+                </div>
 
 
 
