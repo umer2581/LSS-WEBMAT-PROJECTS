@@ -1,13 +1,19 @@
 <?php
-$host='localhost:3306';
-$username='root';
-$password='';
-$dbname='mbus-courier';
-// connecting variable
-$conn = mysqli_connect($host,$username,$password,$dbname);
-// if connection false
-if(!$conn){
-    die('connection falied'.mysqli_connect_error());
-}
+// connection establishing
 
+$host = 'localhost:3306';
+$username = 'root';
+$upass = '';
+$dbname = 'mbus';
+
+// creating connection variable
+
+$conn = mysqli_connect($host,$username,$upass,$dbname);
+
+// if connection false
+
+if(!$conn){
+    die('connection unsuccessful'.mysqli_connect_error());
+}
 ?>
+

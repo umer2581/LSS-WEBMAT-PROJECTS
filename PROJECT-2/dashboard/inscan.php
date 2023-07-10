@@ -204,16 +204,16 @@
 
                     </div>
                     <button class="red-button">Update</button>
-  <button class="red-button">Cancel</button>
+                    <button class="red-button">Cancel</button>
                 </div>
 
 
-
-                </div>
 
             </div>
+
         </div>
-        <!--Outer end-->
+    </div>
+    <!--Outer end-->
 </body>
 
 </html>

@@ -39,20 +39,20 @@
 
       <!-- About Section -->
       <div class="aboutsec-network">
-        <div class="heading">OUR NETWORK</div>
-        <div class="paratext">
-          An internationally spread business calls for an international network for smooth and speedy operations. At
-          Airways, we always strive to improve our network by seeking out for newer partnerships in the international
-          arena. Recently, we tied up with Gulf Express, for international business, which has rich experience in
-          international business. This enables us to add more speed and punctuality to the already excelling service.
-          <br><br>
-          Also, to be able to reach the top, the internal management of the company has to be par excellence. Our
-          company is blessed with two directors who are apt, resourceful and tactical in their field (One of them is the
-          Managing Director of the company). Under them is the dedicated staff of 2161 who are always in search of
-          higher standards and newer challenges. Our staff is equipped with cellular phones and pagers for better
-          communication with each other.
+      <?php
+include("admin/config/connection.php");
+$selectQuery = "SELECT * FROM network";
+$result = mysqli_query($conn, $selectQuery);
+$row = mysqli_fetch_assoc($result);
+$heading = $row['nethead'];
+$content = $row['netpara'];
+?>
 
-        </div>
+<div class="heading"><?php echo $heading; ?></div>
+<div class="paratext">
+    <?php echo $content; ?>
+</div>
+
       </div>
       <!-- Map Section -->
       <div class="aboutsec-map">
@@ -164,7 +164,7 @@
 
       </div>
 
-      <div class="footer" style="background-image: url('images/fback3.jpg');">
+      
         <?php
         //   Footer will be here
         include("footer.php");

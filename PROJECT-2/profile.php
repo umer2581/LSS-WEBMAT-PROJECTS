@@ -44,100 +44,54 @@
                     <h2> Profile</h2>
                     <div class="table">
                         <table cellpadding="15">
-                            <tr>
-                                <td>Name</td>
-                                <td>AIRWAYS COURIER INDIA PVT LTD.</td>
-                            </tr>
-                            <tr>
-                                <td>Corporate Office</td>
-                                <td>Airways Courier India Pvt Ltd,
-                                    37/11, Airways house ,
-                                    2nd cross, Meanue Avenue Road,
-                                    Bangalore- 560042
-                                    Phone: 080-46525252/080-25562664/080-25574406</td>
-                            </tr>
-                            <tr>
-                                <td>Registered Office</td>
-                                <td>Airways Courier India Pvt Ltd,Airways House,
+                        <?php
+include("admin/config/connection.php");
+$selectQuery = "SELECT * FROM aboutus1";
+$result = mysqli_query($conn, $selectQuery);
+?>
 
-                                    #18/3 1st Main Road S R Nagar Bangalore - 560027
+<?php while ($row = mysqli_fetch_assoc($result)) { ?>
+    <tr>
+        <td><?php echo $row['title']; ?></td>
+        <td><?php echo $row['text']; ?></td>
+    </tr>
+    <?php } ?>
 
-                                    Phone: 080-40923584,080-42040421,80-25353541/42</td>
-                            </tr>
-                            <tr>
-                                <td>Construction</td>
-                                <td>Pvt Limited Company</td>
-                            </tr>
-                            <tr>
-                                <td>Incorporated Date</td>
-                                <td>Day - Month - Year
-                                    16 - 02 - 1994</td>
-                            </tr>
-                            <tr>
-                                <td>Directors</td>
-                                <td>Mr.Boja (All India Director)
-                                    Mr.Sunil Poojary (Managing Director)
-                                    Mr.Harish Poojary (Financial Director)</td>
-                            </tr>
-                            <tr>
-                                <td>Age of the Company</td>
-                                <td>28 Years</td>
-                            </tr>
-                            <tr>
-                                <td>Major Office in India</td>
-                                <td>Zonal Offices:
-                                    Mumbai, New Delhi, Calcutta, Ahmedabad, Chennai, Hyderabad, Cochin</td>
-                            </tr>
-                            <tr>
-                                <td>Business Strength</td>
-                                <td>Widest network throughout the country being the largest as world wide courier and
-                                    cargo.</td>
-                            </tr>
-                            <tr>
-                                <td>Business Status</td>
-                                <td>One among the Seven Leading International And Domestic Courier And Cargo company in
-                                    the Nation.Poised to establish rapid development in international Courier with the
-                                    help of the infrastructure, experience and expertise domestic Operators.</td>
-                            </tr>
                         </table>
-                        <p class="black">
-                            AIRWAYS COURIER is one of the largest Indian company in the Express industry. AIRWAYS
-                            COURIER takes the credit of pioneering the franchisee concept for the courier industry in
-                            India, and today has the largest franchisee network.
-                        </p>
-                        <p class="black">
-                            AIRWAYS COURIER also gives lot of importance to 'Women Empowerment'. Mr.Sunil Poojary,
-                            Managing Director, believes "Women are emerging from the confines of their homes to take
-                            their rightful place as equals in society. They are equally, if not more talented, capable
-                            and efficient as men as can be seen from more and more traditionally male-dominated bastions
-                            being stormed by women. However, men should not feel threatened but view this phenomenon as
-                            a progression towards more rapid development. Women too should strive to achieve greater
-                            heights and never feel intimidated regardless of circumstances, but by their example and
-                            gentleness, try to change what is not right around them."</p>
-                        </p>
-                        <p class="black">Airways Courier, we does not limit our duties to the mere, "you pay me, I work"
-                            policy. Our concern for the customer takes us beyond the traditional ways of handling our
-                            business. Over the years, we have incorporated many special services to give maximum
-                            satisfaction to our customers. Some of them are:</p>
-
-                        <p class="black"> Diplomatic Service: When deliveries for certain far off places are undertaken,
-                            to avoid a possible delay, the franchisee of the particular area will undertake the
-                            responsibility of delivering the goods. This way, we lessen the chances of a possible delay
-                            in delivery</p>
-
-                        <p class="black"> Customer Support and Customer Services: Since we are in a service industry,
-                            lot of care has to be given to this area. Our policy towards the customer care is "what
-                            problems do customers have and what resources do we have to solve them?" At Airways, we have
-                            adopted certain standards regarding customer care to give a better service.</p>
+                        
 
 
-                        <h5>We have taken into account following things in this regard:</h5>
+                            <?php
+include("admin/config/connection.php");
+$selectQuery = "SELECT * FROM aboutus2";
+$result = mysqli_query($conn, $selectQuery);
+?>
+
+<?php while ($row = mysqli_fetch_assoc($result)) { ?>
+    <?php echo $row['about'];?>
+    <h5><?php echo $row['lihead']; ?></h5>
+<?php } ?>
+
                         <ol>
-                            <li>We provide best courier service.</li>
-                            <li>By Air Express, Surface, & Cargo mode.</li>
-                            <li>To Our Valuable clients & Customer.</li>
-                            <li>And we give delivery to any part of the country & any size & shape.</li>
-                            <li>Uniting the people across the globe.</li>
+                        <?php
+// Assuming you have already included the connection file (config/connection.php) in this file
+
+// Select query to fetch data from the about3 table
+$selectQuery3 = "SELECT * FROM about3";
+$result3 = mysqli_query($conn, $selectQuery3);
+
+?>
+
+<!-- Your HTML code -->
+    <?php
+    // Loop through the result set and display the list items
+    while ($row3 = mysqli_fetch_assoc($result3)) {
+        $listItem = $row3['list'];
+        echo '<li>' . $listItem . '</li>';
+    }
+    ?>
+
+<!-- Continue with the rest of your HTML code -->
 
                         </ol>
 
@@ -149,44 +103,11 @@
 
 
 
-             <div class="footer sfmargin" style="background-image: url('images/fback3.jpg');">
-                <div class="fcontainer">
-                    <div class="fcontact">
-                        <div class="cbtn">Contact US</div>
-                        <div class="fleft">
-                            <h4>About Us</h4>
-                            <p> AIRWAYS COURIER is one of the largest Indian company in the Express industry. AIRWAYS
-                                COURIER takes the credit of pioneering the franchisee concept for the courier industry
-                                in India, and today has the largest franchisee network</p>
-                            <u class="bi-facebook"> </u>
-                            <u class="bi-twitter"> </u>
-                            <u class="bi-youtube"> </u>
-                            <u class="bi-phone-fill u1"> </u>
-                        </div>
-                        <div class="fright">
-                            <div class="frcat">
-                                <h4>Popular Categories</h4>
-                                <div class="pmenus">Destination</div>
-                                <div class="pmenus">Network</div>
-                                <div class="pmenus">PinCode Finder</div>
-                                <div class="pmenus">Gallery</div>
-                                <div class="pmenus">Login</div>
-                            </div>
-                            <div class="frcont">
-                                <h4>Contact Us</h4>
-                                <p>
-                                    <red>BANGALORE HEAD OFFICE:</red> COURIER INDIA PRIVATE LIMITED 37/11, Airways house
-                                    , 2nd cross, Meanue Avenue Road Bangalore- 560042
-                                    <br>
-                                    <red>PHONE:</red> 080-2546879515 Till 100 Lines<br>
-                                    <red>EMAIL:</red> customercare@courier.co.In
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-             </div>
+             <!-- FOOTER STARTS HERE  -->
+             <?php
+            include("footer.php");
+            ?>
+                <!-- FOOTER ENDS HERE  -->      </div>
 </body>
 
 </html>

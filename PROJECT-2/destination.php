@@ -24,10 +24,11 @@ $result = mysqli_query($conn, $sql);
 
         <!-- Header Start -->
         <div class="header">
-      <?php
-      include("header.php");
-      ?>
-    </div>
+            <div class="hleft"><img class="img" src="images/logo1.gif" height="100%" width="100%">
+            </div>
+
+
+        </div>
 
         <!-- Menubar Start -->
         <div class="menubar">
@@ -51,7 +52,7 @@ $result = mysqli_query($conn, $sql);
                     <?php
                     while ($row = mysqli_fetch_assoc($result)) {
                         $STATION = $row["station"];
-                        $TRANSIT = $row["transit-time"];
+                        $TRANSIT = $row["transit"];
                         echo "<div class='tleft'>$STATION</div><div class='tright'>$TRANSIT</div>";
                     }
                     ?>

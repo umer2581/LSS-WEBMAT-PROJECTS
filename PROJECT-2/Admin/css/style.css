@@ -1,0 +1,282 @@
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    .outer {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        height : 120px;
+        color: #fff;
+        padding: 10px;
+    }
+    
+    .hleft {
+        display: flex;
+        align-items: center;
+        width: 30%;
+    }
+    
+    .hright {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 70%;
+    }
+    
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    
+    .button {
+        margin-right: 10px;
+        padding: 10px 20px;
+        background-color: #000;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        height: 40px;
+        width: 120px;
+    }
+    
+    .button:hover {
+        background-color: #222;
+    }
+
+    .container {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+        border: 1px solid #ccc; /* Add border style */
+        overflow: hidden; /* Hide overflowing content */
+    }
+    
+    
+    .cleft, .cright {
+        padding: 10px;
+    }
+    
+    .cleft {
+        width: 30%;
+        border-right: 1px solid #ccc; /* Add right border to cleft */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+    }
+
+    .cleft .button {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .cright {
+        width: 70%;
+        overflow-y: auto; /* Enable vertical scrolling when content exceeds the container height */
+        max-height: calc(100vh - 140px); /* Adjust the value based on your header height */
+    }
+    
+
+    .thead{
+        height : 35px;
+        width : 40%;
+        background-color : black;
+        color : white;
+        padding-top :6px;
+        text-align : center;
+        float : left;
+        font-size : 20px;
+        box-sizing : border-box;
+    }
+    .trow{
+        height : 35px;
+        width : 35%;
+        border : 1px solid black;
+        padding-top :6px;
+        text-align : center;
+        float : left;
+        font-size : 20px;
+        box-sizing : border-box;
+    }
+    .btn-row{
+        height : 35px;
+        width : 10%;
+        border : 1px solid black;
+        padding :2px;
+        text-align : center;
+        float : left;
+        font-size : 20px;
+        box-sizing : border-box;
+    }
+    .delete-btn {
+     background-color: red;
+     color: white;
+     width: 90%;
+     height : 30px;
+     border : none;
+     cursor: pointer;
+    }
+
+    .insert-btn {
+     background-color: green;
+     color: white;
+     width: 90%;
+     height : 30px;
+     border : none;
+     cursor: pointer;
+    }
+
+    .contact-fields{
+        background-color: #333;
+        width: 80%;
+        padding: 30px;
+        height: auto;
+        margin-left: 25px;
+    }
+
+    .contactrow {
+        height: 35px;
+        width: 90%;
+        text-align: center;
+        margin: 15px 0 15px 15px;
+    }
+    
+    .contactrow > input {
+        height: 31px;
+        margin: 2px 0 0 2px;
+        width: 98%;
+        font-size: 20px;
+    } 
+    
+    .contactrow-textarea {
+        height: 100px;
+        width: 88%;
+        resize: none;
+        overflow: scroll;
+        margin-bottom: 15px;
+        margin: 15px 0 15px 22px;
+    }
+    .contact-sub {
+        padding: 10px 20px;
+        background-color: #000;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        height: 40px;
+        width: 120px;
+        margin-left: 297;
+    }
+
+    .contact-sub:hover {
+        background-color: white;
+        color: black;
+    }
+    /* for tables */
+    .table {
+        margin : 25 0 25 25;
+        display: table;
+        width: 85%;
+        border-collapse: collapse;
+    }
+
+    .table-row {
+        display: table-row;
+    }
+
+    .table-header,
+    .table-cell {
+        display: table-cell;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .table-header {
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+
+    .table-cell.address {
+        max-height: 100px;
+        overflow-y: auto;
+    }
+
+    .action-buttons {
+        display: flex;
+        flex-direction : column;
+        justify-content: center;
+    }
+
+    .t-button{
+     background-color: black;
+     color: white;
+     width: 90%;
+     height : 30px;
+     border : none;
+     cursor: pointer;
+     margin : 10;
+    }
+
+    .news-fields{
+        background-color: #333;
+        width: 80%;
+        padding: 30px;
+        height: auto;
+        margin-left: 25px;
+    }
+
+    .nrow {
+        height: 35px;
+        width: 90%;
+        text-align: center;
+        margin: 15px 0 15px 15px;
+    }
+
+    .nrow > input {
+        height: 31px;
+        margin: 2px 0 0 2px;
+        width: 98%;
+        font-size: 20px;
+    } 
+    
+    .ntextarea {
+        height: 100px;
+        width: 88%;
+        resize: none;
+        overflow: scroll;
+        margin-bottom: 15px;
+        margin: 15px 0 15px 22px;
+    }
+
+    .nrow1 {
+        height: 35px;
+        width: 90%;
+        text-align: center;
+        margin: 15px 0 15px 15px;
+        display: inline-block;
+        color: burlywood;
+    }
+
+    .aboutf{
+        background-color: #333;
+        width: 80%;
+        padding: 30px;
+        height: auto;
+        margin-left: 25px;
+    }
+
+
+
+    
+    

@@ -91,6 +91,9 @@
     .form-group button:hover {
       background-color: #764ba2;
     }
+    a{
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -112,7 +115,7 @@
         <label for="remember">Remember me</label>
       </div>
       <div class="form-group">
-      <a href="dashboard/index.html">  <button type="submit">Login</button> 
+     <a href="dashboard/index.php"><button type="login">Login</button> </a> 
       </div></a>
     </form>
   </div>
