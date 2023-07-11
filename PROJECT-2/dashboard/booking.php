@@ -44,15 +44,34 @@
 
                             </script>
                             <div class="m1-boxes">Date <br> <input id="date" name="date"
-                                    style="width:100px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                    style="width:110px; height:20px; font-size:12.5px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
 
                                 <script type="text/javascript">
                                     document.getElementById('date').value = Date();
                                 </script>
                             </div>
                             <div class="m1-boxes">Time <br>
-                                <input type="time"
-                                    style="width:100px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                <script>
+                                    window.addEventListener('load', function () {
+                                        var inputField = document.getElementById('time-input');
+
+                                        // Function to set the current time in the input field
+                                        function setCurrentTime() {
+                                            var currentTime = new Date().toLocaleTimeString();
+                                            inputField.value = currentTime;
+                                        }
+
+                                        // Set the initial current time
+                                        setCurrentTime();
+
+                                        // Update the time every second
+                                        setInterval(setCurrentTime, 1000);
+                                    });
+                                </script>
+                                <input type="text" id="time-input"
+                                    style="width:100px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
+                                <!-- <input type="time"
+                                    style="width:100px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;"> -->
                             </div>
                         </div>
                     </div>
