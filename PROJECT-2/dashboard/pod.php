@@ -33,7 +33,7 @@
             <div class="hub-inscan" style="height:100px;">
                  <div class="hub-left" style="height:100px; border:none;">
                     <div class="hub-leftbox" >
-                        Waybill No <br> <input type="text"
+                        Waybill No <br> <input type="text" name="podbill"
                             style="width:180px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                     </div>
                     
@@ -70,7 +70,7 @@
                         <input type="text" id="time-input"
                             style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
                     </div>
-                    <div class="hr1-boxes"><input type="checkbox">Remarks <br> <input type="text"
+                    <div class="hr1-boxes"><input type="checkbox">Remarks <br> <input type="text" name="podrmk"
                             style="width:140px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                     </div>
 

@@ -32,13 +32,13 @@
             </div>
             <div class="hub-inscan" style="height:100px; border:none;">
                 <div class="hub-left" style="height:100px; border:none;">
-                    <div class="h1-left"> Code/ Name ( Hub ) <br> <input type="text"
+                    <div class="h1-left"> Code/ Name ( Hub ) <br> <input type="text" name="ofname"
                             style="width:435px; height:20px; margin-top:10px; border-radius:5px;">
                     </div>
 
                 </div>
                 <div class="hub-right" style="height:100px; border-left:2px solid black;">
-                    <div class="hr1-boxes">Area<br> <input type="text"
+                    <div class="hr1-boxes">Area<br> <input type="text" name="ofarea"
                             style="width:130px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                     </div>
                     <div class="h1-boxes">Date <br> <input id="date" name="date"
@@ -66,7 +66,7 @@
                                 setInterval(setCurrentTime, 1000);
                             });
                         </script>
-                        <input type="text" id="time-input"
+                        <input type="text" id="time-input" 
                             style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
                     </div>
                 </div>
@@ -75,10 +75,10 @@
             <div class="hub-inscan" style="height:100px;">
                  <div class="hub-left" style="height:100px; border:none;">
                     <div class="hub-leftbox" >
-                        Waybill No <br> <input type="text"
+                        Waybill No <br> <input type="text" name="ofway"
                             style="width:130px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                     </div>
-                    <div class="hub-leftbox" style="width:290px "><input type="checkbox">Pcs <br> <input type="text"
+                    <div class="hub-leftbox" style="width:290px "><input type="checkbox">Pcs <br> <input type="text" name="ofpcs"
                             style="width:100px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                             
                     </div>
@@ -87,13 +87,13 @@
                    
                 </div>
                 <div class="hub-right" style="height:100px; border-left:2px solid black;">
-                    <div class="hr1-boxes">Consig <br> <input type="text"
+                    <div class="hr1-boxes">Consig <br> <input type="text" name="ofcons"
                             style="width:140px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                     </div>
-                    <div class="hr1-boxes">Address <br> <input type="text"
+                    <div class="hr1-boxes">Address <br> <input type="text" name="ofadd"
                             style="width:140px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                     </div>
-                    <div class="hr1-boxes"><input type="checkbox">Remarks <br> <input type="text"
+                    <div class="hr1-boxes"><input type="checkbox">Remarks <br> <input type="text" name="ofrmk"
                             style="width:140px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                     </div>
 

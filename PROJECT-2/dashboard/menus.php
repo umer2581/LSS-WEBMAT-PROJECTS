@@ -1,29 +1,30 @@
 <div class="menu-bar">
-
+<div class="mleft">
+<div class="vertical-menu">
     <div class="logo">
-        <img src="images/mbus courier.gif" alt="Logo">
+      <img src="images/mbus courier.gif" alt="Company Logo" width="120" height="120" style="margin-left:10px; border-radius:10px">
+      <br>
+      <br>
+      <hr>
     </div>
+    <a href="index.php">Dashboard  </a>
     <hr>
-    <div class="menu-list">
-        <ul>
-            <li class="active"><i class="fas fa-qrcode"></i> Dashboard<i class="fas fa-caret-right dropdown-icon"></i>
-            <li class="active"><i class="fas fa-qrcode"></i> Inscan Entry<i
-                    class="fas fa-caret-right dropdown-icon"></i>
+    <a href="booking.php">Booking</a>
+    <hr>
+    <a href="hub-scan.php">Hub inscan</a>
+    <hr>
+    <a href="manifist.php">Manifest</a>
+    <hr>
+    <a href="outfordelivery.php">Out for Delivery</a>
+    <hr>
+    <a href="pod.php">Status entry</a>
+    <hr>
+    <a href="#">Print Document</a>
+    <hr>
+    <a href="#">View User Query</a>
+    <hr>
+    <a href="#">Logout</a>
+    <hr>    
+  </div>
 
-            </li>
-            <li><i class="fas fa-sign-out-alt"></i> Outscan Entry<i class="fas fa-caret-right dropdown-icon"></i>
-                <ul class="submenu">
-                    <li>Manifest Entry</li>
-                    <li>Out for Delivery</li>
-                </ul>
-            </li>
-            <li><i class="fas fa-info-circle"></i> Status Entry<i class="fas fa-caret-right dropdown-icon"></i>
-                <ul class="submenu">
-                    <li>POD Entry</li>
-                </ul>
-            </li>
-            <li><i class="fas fa-exchange-alt"></i> Transactions</li>
-            <li><i class="fas fa-print"></i> Print Document</li>
-            <li><i class="fas fa-sign-out-alt"></i> Logout</li>
-        </ul>
-    </div>
+</div>
