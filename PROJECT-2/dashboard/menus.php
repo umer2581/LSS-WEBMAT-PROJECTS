@@ -21,6 +21,10 @@
     <hr>
     <a href="#">Print Document</a>
     <hr>
+    <a href="book-transac.php">Booking Transaction</a>
+    <hr>
+    <a href="#">Hub Transaction</a>
+    <hr>
     <a href="#">View User Query</a>
     <hr>
     <a href="#">Logout</a>

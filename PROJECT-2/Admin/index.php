@@ -141,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <div class="login-container">
         <!-- Your login form here -->
-        <form action="" method="post">
+        <form action="index.php" method="post">
             <!-- Form fields -->
             <div class="form-group">
                 <i class="fas fa-user fa-lg"></i>

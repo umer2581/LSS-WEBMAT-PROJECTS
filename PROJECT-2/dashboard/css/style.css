@@ -74,7 +74,7 @@ body {
   .vertical-menu {
     width: 200px;
     background-color: aliceblue;
-    font-size: 18px;
+    font-size: 14px;
     padding-left: 10px;
     font-weight: bolder;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -427,4 +427,22 @@ body {
         font-weight: bold;
 
 }
+tr{
+    width: 200px;
+}
+th{
+    background-color: black;
+    color: white;
+    width: 300px;
+    min-height:50px;
+    border: 2px solid black;
+}
+table{
+    margin: 50px 0 0 20px;
+}
 /* hub scan code end and booking end */
+.book-table{
+    width: 100px;
+    /* background-color: red; */
+    margin: 50px 0 0 20px;
+}

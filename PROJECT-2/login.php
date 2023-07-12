@@ -115,7 +115,7 @@
         <label for="remember">Remember me</label>
       </div>
       <div class="form-group">
-     <a href="dashboard/index.php"><button type="login">Login</button> </a> 
+     <a href="admin/index.php"><button type="login">Login</button> </a> 
       </div></a>
     </form>
   </div>
