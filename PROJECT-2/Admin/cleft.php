@@ -9,5 +9,4 @@
                 <button class="button" onclick="location.href='ViewGallery.php'">View Gallery</button>
                 <button class="button" onclick="location.href='sliderg.php'">Slider Gallery</button>
                 <button class="button" onclick="location.href='Destination.php'">Destination</button>
-                <button class="button" onclick="location.href='Network.php'">Network</button>
             </div>

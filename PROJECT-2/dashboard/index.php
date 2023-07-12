@@ -19,7 +19,7 @@
         <div class="main">
             <div class="mleft">
                 <?php
-                include("footer.php");
+                include("menus.php");
                 ?>
               
                 </div>

@@ -7,8 +7,8 @@
                 <a href="services.php">
                     <div class="menus">Services</div>
                 </a>
-                <a href="network.php">
-                    <div class="menus">Network</div>
+                <a href="shipment.php">
+                    <div class="menus">Shipment</div>
                 </a>
                 <a href="destination.php">
                     <div class="menus">Destination</div>
@@ -19,9 +19,9 @@
                 <div class="menus">
                             <span>Login</span>
                             <ul>
-                            <li><a href="login.php">Login</a></li>
+                            <li>Login</li>
                             <li><a href="login.php">Admin</a></li>
-                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="login.php">Dashboard</a></li>
                             </ul>
                         </div>
                 
