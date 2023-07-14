@@ -1,3 +1,10 @@
+<?php
+     include('admin/config/connection.php');
+     $sql="select * from imagegallery";
+     $result=mysqli_query($conn,$sql)or die ("Table connectivity failed");
+?>
+
+
 <html>
 
 <head>
@@ -158,7 +165,43 @@
                     <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
                 </div>
                 <div data-u="slides" style="cursor:default;position:relative;border-radius:25px;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
-                    <div>
+                    
+                
+                <?php
+                    while($row=mysqli_fetch_assoc($result))
+                      {
+                    ?>
+                     
+                         <div>
+                         <img src="gimages/<?php echo $row['filename'] ?>" height="100%" width="100%">
+                         <div data-u="thumb"><img src="gimages/<?php echo $row['filename'] ?>" height="90px" width="190px"></div> 
+                        </div>
+
+                        <?php
+                            }
+                        ?>
+
+<!-- 
+                <div>
+                        <img data-u="image" src="img/031.jpg" />
+                        <img data-u="thumb" src="img/031-s190x90.jpg"  height="90px" width="190px">
+                    </div>
+                
+                 -->
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- <div>
                         <img data-u="image" src="img/031.jpg" />
                         <img data-u="thumb" src="img/031-s190x90.jpg" />
                     </div>
@@ -181,7 +224,7 @@
                     <div>
                         <img data-u="image" src="img/036.jpg" />
                         <img data-u="thumb" src="img/036-s190x90.jpg" />
-                    </div>
+                    </div> -->
                     <!-- </div> -->
                 </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">web animation</a>
                 <!-- Thumbnail Navigator -->

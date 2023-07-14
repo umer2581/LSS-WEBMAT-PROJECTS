@@ -1,4 +1,22 @@
-<!DOCTYPE html>
+<?php
+include("config/session.php");
+include("config/connection.php");
+ if(isset($_POST['update'])){
+$waybillno= $_POST['podbill'];
+$image = $_FILES['pod']['name'];
+$date= $_POST['date'];
+$time= $_POST['time'];
+$remarks= $_POST['podrmk'];
+$Tmpname=$_FILES['pod']['tmp_name'];
+
+$Folder="pod-images/".$image;
+move_uploaded_file($Tmpname, $Folder);
+
+$sql="INSERT INTO podimages (id,waybillno, `image`, `date`,`time`,remarks) VALUES ('','$waybillno', '$image', '$date', '$time', '$remarks')";
+
+$result = mysqli_query($conn,$sql);
+}
+?>
 <html>
 
 <head>
@@ -31,6 +49,7 @@
                 </div>
             </div>
             <div class="hub-inscan" style="height:100px;">
+            <form method="post" enctype="multipart/form-data">
                  <div class="hub-left" style="height:100px; border:none;">
                     <div class="hub-leftbox" >
                         Waybill No <br> <input type="text" name="podbill"
@@ -68,7 +87,7 @@
                             });
                         </script>
                         <input type="text" id="time-input"
-                            style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
+                         name="time"   style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
                     </div>
                     <div class="hr1-boxes"><input type="checkbox">Remarks <br> <input type="text" name="podrmk"
                             style="width:140px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
@@ -76,10 +95,10 @@
 
         </div>
         </div>
-        <button class="red-button">Update</button>
+        <input type="file" value="Image" name="pod" class="red-button">
+        <input type="submit" name="update" value="update" class="red-button">
             <button class="red-button">Cancel</button>
-            <input type="file" value="Image" name="pod" class="red-button">
-            
+                        </form>
 
 
             </div>

@@ -1,3 +1,22 @@
+<?php
+include("dashboard/config/connection.php");
+if(isset($_POST['submit'])){
+    $packtype = $_POST['city'];
+    $wtpps = $_POST['cname'];
+    $length = $_POST['mnumber1'];
+    $height = $_POST['mnumber2'];
+    $width = $_POST['mnumber3'];
+    $tpv = $_POST['mnumber4'];
+    $tpw = $_POST['tweight'];
+    $sql="INSERT INTO parcel (`id`,`packtype`,`wtpps`,`length`,`height`,`width`,`tpv`,`tpw`) VALUES ('','$packtype','$wtpps','$length','$height','$width','$tpv','$tpw')";
+    $result=mysqli_query($conn,$sql);
+    echo '<script>alert("Your Query Submitted Successfully")</script>';
+    echo "<script>window.location = 'ordersummary.php'</script>";
+    $sql1 = "INSERT INTO loopcount (`id`) VALUES ('')";
+    $result1 = mysqli_query($conn,$sql1);
+}
+?>
+
 <html>
 
 <head>
@@ -84,7 +103,7 @@
                                                         Length <red>*</red>
                                                         </div>
                                                         <div class="pbottom">
-                                                        <input type="text" class="inputhalf" name="mnumber" placeholder="" required style="margin-bottom:10px;"> cm
+                                                        <input type="text" class="inputhalf" name="mnumber1" placeholder="" required style="margin-bottom:10px;"> cm
                                                         </div>
                                                     </div>
 
@@ -93,7 +112,7 @@
                                                         Height <red>*</red>
                                                         </div>
                                                         <div class="pbottom">
-                                                        <input type="text" class="inputhalf" name="mnumber" placeholder="" required style="margin-bottom:10px;"> cm
+                                                        <input type="text" class="inputhalf" name="mnumber2" placeholder="" required style="margin-bottom:10px;"> cm
                                                         </div>
                                                     </div>
 
@@ -102,7 +121,7 @@
                                                         Width <red>*</red>
                                                         </div>
                                                         <div class="pbottom">
-                                                        <input type="text" class="inputhalf" name="mnumber" placeholder="" required style="margin-bottom:10px;"> cm
+                                                        <input type="text" class="inputhalf" name="mnumber3" placeholder="" required style="margin-bottom:10px;"> cm
                                                         </div>
                                                     </div>
 
@@ -129,7 +148,7 @@
                                                         Total Parcel Value <red>*</red>
                                                         </div>
                                                         <div class="pbottom">
-                                                        <input type="text" class="inputhalf" name="mnumber" placeholder="" required style="margin-bottom:10px;"> cm
+                                                        <input type="text" class="inputhalf" name="mnumber4" placeholder="" required style="margin-bottom:10px;"> cm
                                                         </div>
                                                     </div>
 
@@ -157,8 +176,8 @@
                                      </div>
                                     
                                      <a href="shipment2.php"><div class="form-btn-back p-margin"><bt class="bi-chevron-double-left"></bt>Back</div></a>
-                                        <a href="shipment.php"><div class="form-btn-s p-margin">Submit</div></a>
-                                        <a href="shipment.php"><div class="form-btn-cancel p-margin" style="bottom:54px;">Cancel Shipment</div></a>
+                                     <div class="form-btn-back p-margin">
+                                                                             <input type="submit" name="submit" value="submit" style="background-color:blue; font-size:20px; border:none; color:white;"></div><a href="shipment.php"><div class="form-btn-cancel p-margin" style="bottom:54px;">Cancel Shipment</div></a>
 
                                     </div>
 

@@ -1,6 +1,6 @@
 <?php
 include("config/connection.php");
-
+include("config/session.php");
 if (isset($_POST['gimage'])) {
   // Process the uploaded image
   $image = $_FILES['image'];

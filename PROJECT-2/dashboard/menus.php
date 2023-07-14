@@ -1,3 +1,8 @@
+<?php
+
+include("config/session.php");
+?>
+
 <div class="menu-bar">
 <div class="mleft">
 <div class="vertical-menu">
@@ -7,7 +12,7 @@
       <br>
       <hr>
     </div>
-    <a href="index.php">Dashboard  </a>
+    <a href="home.php">Dashboard  </a>
     <hr>
     <a href="booking.php">Booking</a>
     <hr>
@@ -21,13 +26,11 @@
     <hr>
     <a href="#">Print Document</a>
     <hr>
-    <a href="book-transac.php">Booking Transaction</a>
+    <a href="book-transac.php">Transactions</a>
     <hr>
-    <a href="#">Hub Transaction</a>
+    <a href="../userquery.php">View User Query</a>
     <hr>
-    <a href="#">View User Query</a>
-    <hr>
-    <a href="#">Logout</a>
+    <a href="logout.php">Logout</a>
     <hr>    
   </div>
 

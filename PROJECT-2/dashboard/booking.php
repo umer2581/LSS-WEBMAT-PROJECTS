@@ -1,3 +1,60 @@
+<?php
+include("config/session.php");
+include("config/connection.php");
+
+if(isset($_POST['update'])){
+    $codename = $_POST['codename'];
+    $waybillno = $_POST['waybillno'];
+    $refno = $_POST['refno'];
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+    $from_customer = $_POST['from_customer'];
+    $address = $_POST['address'];
+    $city = $_POST['city'];
+    $pin = $_POST['pin'];
+    $mail = $_POST['mail'];
+    $mobile = $_POST['mobile'];
+    $consignee_name = $_POST['consignee_name'];
+    $consignee_address = $_POST['consignee_address'];
+    $consignee_city = $_POST['consignee_city'];
+    $consignee_pin = $_POST['consignee_pin'];
+    $consignee_mail = $_POST['consignee_mail'];
+    $consignee_mobile = $_POST['consignee_mobile'];
+    $destination = $_POST['destination'];
+    $act_wt = $_POST['act_wt'];
+    $vol_wt = $_POST['vol_wt'];
+    $chg_wt = $_POST['chg_wt'];
+    $topay = $_POST['topay'];
+    $riskby = $_POST['riskby'];
+    $amount = $_POST['amount'];
+    $pcs = $_POST['pcs'];
+    $volsize = $_POST['volsize'];
+    $cod = $_POST['cod'];
+    $other_chg = $_POST['other_chg'];
+    $chg_amount = $_POST['chg_amount'];
+    $remarks = $_POST['remarks'];
+ // insert query 
+ 
+ $sql = "INSERT INTO booking (`id`,`branch(from)`,`branch(dest)`,`waybillno`,`refno`,`date`,`time`,`actwt`,`volwt`,`chgwt`,`topay`,`riskby`,`amount`,`pcs`,`volsize`,`cod`,`othchg`,`chgamount`,`remarks`) VALUES ('','$codename','$destination','$waybillno','$refno','$date','$time','$act_wt','$vol_wt','$chg_wt','$topay','$riskby','$amount','$pcs','$volsize','$cod','$other_chg','$chg_amount','$remarks')";
+
+ $result = mysqli_query($conn,$sql);
+
+
+ $sql1 = "INSERT INTO bookingcust (`id`,`customer`,`address`,`city`,`pin`,`mail`,`mobile`) VALUES ('','$from_customer','$address','$city','$pin','$mail','$mobile')";
+
+ $result = mysqli_query($conn,$sql1);
+
+
+ $sql2 =  "INSERT INTO bookingconsignee (`id`,`consignee`,`address`,`city`,`pin`,`mail`,`mobile`) VALUES ('','$consignee_name','$consignee_address','$consignee_city','$consignee_pin','$consignee_mail','$consignee_mobile')";
+
+ $result = mysqli_query($conn,$sql2);
+
+ 
+
+
+
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -31,15 +88,16 @@
                 </div>
                 <div class="input1-main">
                     <div class="main1">
+                        <form action="" method="post">
                         <div class="m1-left"> Code/Name (Employee/Client) <br> <input type="text"
-                                style="width:420px; height:20px; margin-top:10px; border-radius:5px;">
+                            name="codename"    style="width:420px; height:20px; margin-top:10px; border-radius:5px;">
                         </div>
                         <div class="m1-right">
                             <div class="m1-boxes">Waybillno <br> <input type="text"
-                                    style="width:100px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                 name="waybillno"   style="width:100px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                             </div>
                             <div class="m1-boxes">Ref No <br> <input type="text"
-                                    style="width:100px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                name="refno"    style="width:100px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                             </div>
 
                             </script>
@@ -69,7 +127,7 @@
                                     });
                                 </script>
                                 <input type="text" id="time-input"
-                                    style="width:100px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
+                                name="time"    style="width:100px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
                                 <!-- <input type="time"
                                     style="width:100px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;"> -->
                             </div>
@@ -81,14 +139,14 @@
                     <div class="main2">
                         <div class="m2-left">
                             <div class="m2-boxes"> From Customer<br> <input type="text"
-                                    style="width:140px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                name = "from_customer"    style="width:140px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                             </div>
                             <div class="m2-boxes">Address <br> <input type="text"
-                                    style="width:150px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                name="address"    style="width:150px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                             </div>
 
                             </script>
-                            <div class="m2-boxes">City <br> <input id="date" name="date"
+                            <div class="m2-boxes">City <br> <input id="date" name="city"
                                     style="width:140px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px; margin-left:5px">
 
                                 <script type="text/javascript">
@@ -97,29 +155,29 @@
                             </div>
                             <div class="m2-boxes">Pin <br>
                                 <input type="text" maxlength="6"
-                                    style="width:143px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                name="pin"    style="width:143px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                             </div>
                             <div class="m2-boxes">Mail <br>
                                 <input type="email" maxlength="30"
-                                    style="width:155px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                name="mail"    style="width:155px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                             </div>
                             <div class="m2-boxes">Mobile <br>
                                 <input type="text" maxlength="10"
-                                    style="width:143px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;  margin-left:5px">
+                                 name="mobile"   style="width:143px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;  margin-left:5px">
                             </div>
 
                         </div>
                         <div class="m2-right">
                             <div class="m2-boxes">Consignee Name<br> <input type="text"
-                                    style="width:140px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                name="consignee_name"    style="width:140px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                             </div>
                             <div class="m2-boxes">Address <br> <input type="text"
-                                    style="width:150px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                name="consignee_address"    style="width:150px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                             </div>
 
                             </script>
-                            <div class="m2-boxes">City <br> <input id="date" name="date"
-                                    style="width:140px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px; margin-left:15px">
+                            <div class="m2-boxes">City <br> <input id="date"
+                                name="consignee_city"    style="width:140px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px; margin-left:15px">
 
                                 <script type="text/javascript">
                                     document.getElementById('date').value = Date();
@@ -127,15 +185,15 @@
                             </div>
                             <div class="m2-boxes">Pin <br>
                                 <input type="text" maxlength="6"
-                                    style="width:143px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                 name="consignee_pin"   style="width:143px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                             </div>
                             <div class="m2-boxes">Mail <br>
                                 <input type="email" maxlength="30"
-                                    style="width:155px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                 name="consignee_mail"   style="width:155px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                             </div>
                             <div class="m2-boxes">Mobile <br>
                                 <input type="text" maxlength="10"
-                                    style="width:143px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;  margin-left:15px">
+                                 name="consignee_mobile"   style="width:143px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;  margin-left:15px">
                             </div>
 
                         </div>
@@ -145,36 +203,36 @@
                     <div class="main3">
                         <div class="m3-left">
                             <div class=>Code / Name (Destination) <br> <input type="text"
-                                    style="width:440px; height:20px; margin-top:10px; border-radius:5px;">
+                                name="destination"    style="width:440px; height:20px; margin-top:10px; border-radius:5px;">
                             </div>
                             <div class="m3-boxes">
                                 <div class="m3-boxes">Act Wt<br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                     name="act_wt"   style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                                 </div>
                             </div>
                             <div class="m3-boxes">
                                 <div class="m3-boxes">Vol Wt<br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                    name="vol_wt"    style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                                 </div>
                             </div>
                             <div class="m3-boxes">
                                 <div class="m3-boxes">Chg Wt<br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                    name="chg_wt"    style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                                 </div>
                             </div>
                             <div class="m3-boxes">
                                 <div class="m3-boxes">Topay<br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                     name="topay"   style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                                 </div>
                             </div>
                             <div class="m3-boxes">
                                 <div class="m3-boxes">RiskBy [N/C/O]<br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                     name="riskby"   style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                                 </div>
                             </div>
                             <div class="m3-boxes">
                                 <div class="m3-boxes">Amount<br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
+                                     name="amount"   style="width:120px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                                 </div>
                             </div>
 
@@ -183,38 +241,38 @@
                         <div class="m3-right">
                             <div class="m3-boxes">
                                 <div class="m3-boxes">Pcs<br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                    name="pcs"    style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                                 </div>
 
                             </div>
                             <div class="m3-boxes">
                                 <div class="m3-boxes">VolSize (Y/N)
                                     <br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                    name="volsize"    style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                                 </div>
 
                             </div>
                             <div class="m3-boxes">
                                 <div class="m3-boxes">COD<br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                     name="cod"   style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                                 </div>
 
                             </div>
                             <div class="m3-boxes">
                                 <div class="m3-boxes">Other Chg <br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                    name="other_chg"    style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                                 </div>
 
                             </div>
                             <div class="m3-boxes">
                                 <div class="m3-boxes">Chg Amount<br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
+                                    name="chg_amount"    style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                                 </div>
 
                             </div>
                             <div class="m3-boxes">
                                 <div class="m3-boxes">Remarks<br> <input type="text"
-                                        style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:10px;">
+                                    name="remarks"    style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:10px;">
                                 </div>
 
                             </div>
@@ -222,8 +280,9 @@
                         </div>
 
                     </div>
-                    <button class="red-button">Update</button>
+                    <input type="submit" name="update" value="update" class="red-button">
                     <button class="red-button">Cancel</button>
+                                </form>
                 </div>
 
 

@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?PHP
+include("config/session.php");
+include("config/connection.php");
+
+if(isset($_POST['update'])){
+    $branch = $_POST['mcode'];
+    $sealno = $_POST['slno'];
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+    $mode = $_POST['msmod'];
+    $doc = $_POST['nondate'];
+    $pincode = $_POST['mpincode'];
+    $coloader = $_POST['coname'];
+    $codoc = $_POST['docdate'];
+    $waybillno = $_POST['mwaybill'];
+    $destination = $_POST['descode'];
+    $pcs = $_POST['mfpcs'];
+    $weight = $_POST['mfwgt'];
+    $remarks = $_POST['mfrmk'];
+
+    $sql = "INSERT INTO manifest (`id`,`branch`,`sealno`,`date`,`time`,`mode`,`doc`,`pincode`,`coloader`,`codoc`,`waybillno`,`destination`,`pcs`,`weight`,`remarks`) VALUES ('','$branch','$sealno','$date','$time','$mode','$doc','$pincode','$coloader','$codoc','$waybillno','$destination','$pcs','$weight','$remarks')";
+
+    $result = mysqli_query($conn,$sql);
+
+}
+?>
 <html>
 
 <head>
@@ -32,6 +57,7 @@
             </div>
             <div class="hub-inscan">
                 <div class="hub-left">
+                    <form action="" method="post">
                     <div class="h1-left"> Code/ Name ( Hub ) <br> <input type="text" name="mcode"
                             style="width:435px; height:20px; margin-top:10px; border-radius:5px;">
                     </div>
@@ -64,14 +90,14 @@
                             });
                         </script>
                         <input type="text" id="time-input"
-                            style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
+                         name="time"   style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
 
                     </div>
 
 
                 </div>
                 <div class="hub-right">
-                    <div class="hr1-boxes">Mod[A/S] <br> <input type="text" name="Msmod"
+                    <div class="hr1-boxes">Mod[A/S] <br> <input type="text" name="msmod"
                             style="width:130px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                     </div>
                     <div class="h1-boxes">Doc[D/N] <br> <input id="date" name="nondate"
@@ -117,8 +143,9 @@
                 </div>
             </div>
 
-            <button class="red-button">Update</button>
+            <input type="submit" name="update" value="update" class="red-button">
             <button class="red-button">Cancel</button>
+            </form>
 
         </div>
     </div>

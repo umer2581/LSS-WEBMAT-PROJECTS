@@ -1,4 +1,35 @@
-<!DOCTYPE html>
+<?php
+include("config/session.php");
+include("config/connection.php");
+if(isset($_POST['update'])){
+    $codename = $_POST['client'];
+    $pincode = $_POST['pincode'];
+    $mail = $_POST['mail'];
+    $mobile = $_POST['mobile'];
+    $mfno = $_POST['mfno'];
+    $date =$_POST['date'];
+    $time =$_POST['time'];
+    $orihub = $_POST['orihub'];
+    $oricity = $_POST['oricity'];
+    $waybillno =$_POST['waybillno'];
+    $branchto = $_POST['tocode'];
+    $volwt =$_POST['volwt'];
+    $topay =$_POST['topay'];
+    $cod =$_POST['cod'];
+    $mode =$_POST['mod'];
+    $doc = $_POST['doc'];
+    $pcs =$_POST['pcs'];
+    $weight =$_POST['wgt'];
+    $inv =$_POST['ival'];
+    $remarks =$_POST['remarks'];
+    
+//insert query 
+$sql = "INSERT INTO hubinscan (`id`,`branch(from)`,`pincode`,`mail`,`mobile`,`mfno`,`date`,`time`,`orihub`,`oricity`,`waybillno`,`branch(to)`,`volwt`,`topay`,`cod`,`mode`,`doc`,`pcs`,`weight`,`inv`,`remarks`) VALUES ('','$codename','$pincode','$mail','$mobile','$mfno','$date','$time','$orihub','$oricity','$waybillno','$branchto','$volwt','$topay','$cod','$mode','$doc','$pcs','$weight','$inv','$remarks')";
+
+$result = mysqli_query($conn,$sql);
+}
+
+?>
 <html>
 
 <head>
@@ -32,6 +63,7 @@
             </div>
             <div class="hub-inscan">
                 <div class="hub-left">
+                    <form action="" method="post">
                     <div class="h1-left"> Code/Name (Employee/Client) <br> <input type="text" name="client"
                             style="width:435px; height:20px; margin-top:10px; border-radius:5px;">
                     </div>
@@ -75,13 +107,13 @@
                             });
                         </script>
                         <input type="text" id="time-input" 
-                            style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
+                         name = "time"   style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
 
                     </div>
-                    <div class="hr1-boxes">Origin Hub <br> <input type="text" name="origin"
+                    <div class="hr1-boxes">Origin Hub <br> <input type="text" name="orihub"
                             style="width:130px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                     </div>
-                    <div class="hr1-boxes">Origin City <br> <input type="text" name="origin"
+                    <div class="hr1-boxes">Origin City <br> <input type="text" name="oricity"
                             style="width:280px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px;">
                     </div>
                 </div>
@@ -89,7 +121,7 @@
             <div class="hub-inscan">
                 <div class="hub-left">
                     <div class="hub-leftbox">
-                        Waybill No <br> <input type="text" name="cno"
+                        Waybill No <br> <input type="text" name="waybillno"
                             style="width:130px; height:20px; margin-top:5px; background-color:lightblue; border-radius:5px;">
                     </div>
                     <div class="hub-leftbox" style="width:290px">Code / Name(Destination)<br> <input type="text" name="tocode"
@@ -128,10 +160,10 @@
 
                 </div>
             </div>
+            <input type="submit" name="update" value="update" class="red-button">
 
-            <button class="red-button">Update</button>
             <button class="red-button">Cancel</button>
-
+            </form>
         </div>
     </div>
 

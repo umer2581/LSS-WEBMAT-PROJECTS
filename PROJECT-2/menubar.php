@@ -19,9 +19,8 @@
                 <div class="menus">
                             <span>Login</span>
                             <ul>
-                            <li>Login</li>
-                            <li><a href="login.php">Admin</a></li>
-                            <li><a href="login.php">Dashboard</a></li>
+                            <li><a href="admin/index.php">Admin</a></li>
+                            <li><a href="dashboard/index.php">Dashboard</a></li>
                             </ul>
                         </div>
                 

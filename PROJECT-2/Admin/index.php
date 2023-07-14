@@ -1,49 +1,41 @@
 <?php
-session_start();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Database connection
+    
+    error_reporting(0);
     include("config/connection.php");
 
-    // Query to check if the username and password match
-    $query = "SELECT * FROM `login` WHERE username = '$username' AND `password` = '$password'";
-    $result = mysqli_query($conn, $query);
+    if (isset($_POST['submit']))
+    {
+        $Uname=$_POST['username'];
+        $upass=$_POST['password'];
+        $sql="select * from loginadmin where username='$Uname' and password='$upass'";
+        $result=mysqli_query($conn,$sql);
 
-    if (mysqli_num_rows($result) == 1) {
-        // Username and password are correct, create a session
-        $_SESSION['username'] = $username;
-        $_SESSION['loggedin'] = true;
+        $row=mysqli_fetch_assoc($result);
+        $tot=mysqli_num_rows($result);
+        
+          if($tot==1)
+          {
+            echo "hello";
+            session_start();
+            $_SESSION['Admin']=$row['id'];
+            echo "<script> window.location='home.php';    </script> ";
+           
+          }
+          else{
+            echo "<script>alert('Invalid username or pass')</script>";
+            echo "<script>window.location = 'index.php'</script>";
+           
+            }
+            
 
-        // Redirect to the home page or any other page after successful login
-        header("Location: home.php");
-        exit();
-    } else {
-        // Invalid username or password
-        $error = "Invalid username or password";
+
     }
 
-    // Close database connection
-    mysqli_close($conn);
-}
+
 ?>
 
-<!-- Rest of your HTML code -->
-<html>
-<head>
-  <title>Login Page</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!-- Your CSS styles here -->
-</head>
-<body>
-  <div class="login-container">
-    <!-- Your HTML code here -->
-  </div>
-</body>
-</html>
 
+<!DOCTYPE html>
 <html>
 <head>
   <title>Login Page</title>
@@ -59,19 +51,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       justify-content: center;
       min-height: 100vh;
     }
-
+    a{
+      text-decoration: none;
+    }
     .login-container {
+      opacity: 0;
+      transform: scale(0.9);
       background-color: #fff;
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
       padding: 40px;
       width: 400px;
       max-width: 90%;
+      animation: pop-in 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; /* Add pop-in animation */
+    }
+
+    .login-container.show {
+      animation: pop-in 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
     }
 
     .login-logo {
       text-align: center;
       margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add fly-in transition */
+    }
+
+    .login-container.show .login-logo {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .login-logo img {
@@ -81,12 +90,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     .form-group {
       margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add fly-in transition */
+    }
+
+    .login-container.show .form-group {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .form-group label {
       display: block;
       font-weight: bold;
       margin-bottom: 5px;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add fade transition */
     }
 
     .form-group input[type="text"],
@@ -97,6 +115,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       border-bottom: 1px solid #999;
       outline: none;
       font-size: 16px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, border-color 0.5s ease-in-out; /* Add fly-in transition */
+    }
+
+    .login-container.show .form-group input[type="text"],
+    .login-container.show .form-group input[type="password"] {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .form-group i.fa {
@@ -115,11 +142,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       display: flex;
       align-items: center;
       margin-top: 10px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add fly-in transition */
+    }
+
+    .login-container.show .form-group.checkbox {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .form-group.checkbox label {
       font-weight: normal;
       margin-left: 10px;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Add fade transition */
     }
 
     .form-group button {
@@ -131,37 +167,72 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, background-color 0.5s ease-in-out; /* Add fly-in transition */
+    }
+
+    .login-container.show .form-group button {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .form-group button:hover {
       background-color: #764ba2;
     }
+
+    @keyframes pop-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
-<div class="login-container">
-        <!-- Your login form here -->
-        <form action="index.php" method="post">
-            <!-- Form fields -->
-            <div class="form-group">
-                <i class="fas fa-user fa-lg"></i>
-                <input type="text" id="username" name="username" placeholder="Username">
-            </div>
-            <div class="form-group">
-                <i class="fas fa-lock fa-lg"></i>
-                <input type="password" id="password" name="password" placeholder="Password">
-            </div>
-            <div class="form-group checkbox">
-                <input type="checkbox" id="remember" name="remember">
-                <label for="remember">Remember me</label>
-            </div>
-            <div class="form-group">
-               <a href="#"></a> <button type="submit">Login</button>
-            </div>
-            <?php if (isset($error)) { ?>
-                <div class="error"><?php echo $error; ?></div>
-            <?php } ?>
-        </form>
+  <div class="login-container">
+    <div class="login-logo">
+      <img src="images/mbus courier.gif" alt="Logo">
     </div>
+    <form  method="post">
+      <div class="form-group">
+        <i class="fas fa-user fa-lg"></i>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <i class="fas fa-lock fa-lg"></i>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </div>
+      <div class="form-group checkbox">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember me</label>
+      </div>
+      <div class="form-group">
+       <button type="submit" name="submit" value="Login" >Login</button> 
+
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Add JavaScript code to make the container and elements appear with transitions
+    document.addEventListener('DOMContentLoaded', function() {
+      var loginContainer = document.querySelector('.login-container');
+      var formGroups = document.querySelectorAll('.form-group');
+      var loginLogo = document.querySelector('.login-logo');
+
+      loginContainer.addEventListener('animationend', function() {
+        loginContainer.classList.add('show');
+        formGroups.forEach(function(formGroup) {
+          formGroup.classList.add('show');
+        });
+        loginLogo.classList.add('show');
+      });
+    });
+  </script>
 </body>
 </html>

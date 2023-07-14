@@ -1,3 +1,21 @@
+<?php
+include("dashboard/config/connection.php");
+if(isset($_POST['submit'])){
+    $state = $_POST['city'];
+    $fname = $_POST['fname'];
+    $cname = $_POST['cname'];
+    $add1 = $_POST['address1'];
+    $add2 = $_POST['address2'];
+    $city = $_POST['city'];
+    $pincode = $_POST['pincode'];
+    $email = $_POST['semail'];
+    $phoneno = $_POST['mnumber'];
+    $sql="INSERT INTO shipfrom (`id`,`state`,`fname`,`cname`,`addl1`,`addl2`,`city`,`pincode`,`email`,`phoneno`) VALUES ('','$state','$fname','$cname','$add1','$add2','$city','$pincode','$email','$phoneno')";
+    $result=mysqli_query($conn,$sql);
+    echo '<script>alert("press continue")</script>';
+}
+
+?>
 <html>
 
 <head>
@@ -44,11 +62,11 @@
                                 <h1 class="ship-heading">Hello!! Where are you Shipping From...?</h1>
                             </div>
                             <div class="form-main">
-                                <form name="frm1" method="POST"  enctype="multipart/formdata">
+                                <form name="frm1" method="post" action=""  enctype="multipart/formdata">
                                 <div class="frow">
                                     <div class="ftop">State:- <red>*</red></div>
                                         <div class="fbottom">
-                                        <select name="city" class="input bradius">
+                                        <select name="city" class="input bradius" required>
                                             <option value="Andhra Pradesh">Andhra Pradesh</option>
                                             <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                                             <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -103,30 +121,24 @@
                                         <div class="frow">
                                             <div class="ftop">Address Line1 <red>*</red></div>
                                                 <div class="fbottom">
-                                                    <input type="text" class="input" name="address" placeholder="" required > </div>
+                                                    <input type="text" class="input" name="address1" placeholder="" required > </div>
                                         </div>
 
                                         <div class="frow">
                                             <div class="ftop">Address Line2 </div>
-                                                <div class="fbottom"><input type="text" class="input" name="address" placeholder="" >  </div>
+                                                <div class="fbottom"><input type="text" class="input" name="address2" placeholder="" >  </div>
                                         </div>
 
                                         <div class="frow">
-                                    <div class="ftop combine">City/Town/Locality <red>*</red></div><div class="ftop combine2">Pincode<red>*</red></div><div class="ftop combine2">Other Address Information</div>
-                                        <div class="fbottom combine">
+                                    <div class="ftop combine">City/Town/Locality <red>*</red></div><div class="ftop combine2" name="city">Pincode<red>*</red></div>                                       <div class="fbottom combine">
                                         <input type="text" class="inputhalf" name="district" placeholder="" required >
-                                        </div>
-                                        <div class="fbottom combine2">
-                                        <input type="text" class="inputhalf2" name="pincode" placeholder="" required >
                                         </div>
                                         <div class="fbottom combine2">
                                         <input type="text" class="inputhalf2" name="pincode" placeholder="" required >
                                         </div>
                                         </div>
                                         
-                                        <div class="ftop" style="margin-bottom:15px;">
-                                        <input type="checkbox" class="checkbox" name="c1" value="1" > Is this a residential address?
-                                        </div>
+                                        
                                         
                                         <div class="frow">
                                     <div class="ftop combine">Email <red>*</red></div><div class="ftop combine">Phone NO.<red>*</red></div>
@@ -138,13 +150,9 @@
                                         </div>
                                         </div>
 
-                                        <div class="ftop" style="margin-bottom:15px;">
-                                        <input type="checkbox" class="checkbox" name="c2" value="1" > Send status updates on this shipment using the email provided above.
-                                        </div>
 
 
-
-                                        <a href="shipment2.php"><div class="form-btn">Continue<bt class="bi-chevron-double-right"></bt></div></a>
+                                        <input type="submit" name="submit" value="submit" class="form-btn"><a href="shipment2.php"><div class="form-btn">Continue<bt class="bi-chevron-double-right"></bt></div></a>
                                         <a href="shipment.php"><div class="form-btn-cancel">Cancel Shipment</div></a>
                                 </form>
                             </div>

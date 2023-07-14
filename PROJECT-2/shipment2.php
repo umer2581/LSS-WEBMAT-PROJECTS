@@ -1,3 +1,21 @@
+<?php
+include("dashboard/config/connection.php");
+if(isset($_POST['submit'])){
+    $state = $_POST['city'];
+    $fname = $_POST['fname'];
+    $cname = $_POST['cname'];
+    $add1 = $_POST['addl1'];
+    $add2 = $_POST['addl2'];
+    $city = $_POST['city'];
+    $pincode = $_POST['pincode'];
+    $email = $_POST['remail'];
+    $phoneno = $_POST['mnumber'];
+    $sql="INSERT INTO shipto (`id`,`state`,`fname`,`cname`,`addl1`,`addl2`,`city`,`pincode`,`email`,`phoneno`) VALUES ('','$state','$fname','$cname','$add1','$add2','$city','$pincode','$email','$phoneno')";
+    $result=mysqli_query($conn,$sql);
+    echo '<script>alert("press continue")</script>';
+}
+
+?>
 <html>
 
 <head>
@@ -39,14 +57,9 @@
             </div>
             <!-- Content Area -->
                 <div class="shipment-outer">
-                    <div class="shipment-mid">
+                    <!-- <div class="shipment-mid">
                         <h1 class="smid-heading">Ship From/Return To</h1>
-                        <a href="#"><div class="sedit-btn"> <ed class="bi-pencil-fill">Edit</ed></div></a>
-                        <div class="mid-content">
-                            
-
-                        </div>
-                    </div>
+                    </div> -->
                     <div class="shipment-inner">
                             <div class="shipment-heading">
                                 <h1 class="ship-heading">Where is your Shipment going...?</h1>
@@ -111,12 +124,12 @@
                                         <div class="frow">
                                             <div class="ftop">Address Line1 <red>*</red></div>
                                                 <div class="fbottom">
-                                                    <input type="text" class="input" name="address" placeholder="" required > </div>
+                                                    <input type="text" class="input" name="addl1" placeholder="" required > </div>
                                         </div>
 
                                         <div class="frow">
                                             <div class="ftop">Address Line2 </div>
-                                                <div class="fbottom"><input type="text" class="input" name="address" placeholder="" >  </div>
+                                                <div class="fbottom"><input type="text" class="input" name="addl2" placeholder="" >  </div>
                                         </div>
 
                                         <div class="frow">
@@ -127,14 +140,9 @@
                                         <div class="fbottom combine2">
                                         <input type="text" class="inputhalf2" name="pincode" placeholder="" required >
                                         </div>
-                                        <div class="fbottom combine2">
-                                        <input type="text" class="inputhalf2" name="pincode" placeholder="" required >
-                                        </div>
+                                        
                                         </div>
                                         
-                                        <div class="ftop" style="margin-bottom:15px;">
-                                        <input type="checkbox" class="checkbox" name="c1" value="1" > Is this a residential address?
-                                        </div>
                                         
                                         <div class="frow">
                                     <div class="ftop combine">Recipient Email <red>*</red></div><div class="ftop combine">Recipient Phone NO.<red>*</red></div>
@@ -146,12 +154,10 @@
                                         </div>
                                         </div>
 
-                                        <div class="ftop" style="margin-bottom:15px;">
-                                        <input type="checkbox" class="checkbox" name="c2" value="1" > Send status updates on this shipment using the email provided above.
-                                        </div>
-
+                                        
 
                                         <a href="shipment.php"><div class="form-btn-back"><bt class="bi-chevron-double-left"></bt>Back</div></a>
+                                        <input type="submit" name="submit" value="submit" class="form-btn"><a href="shipment2.php">
                                         <a href="parcel.php"><div class="form-btn">Continue<bt class="bi-chevron-double-right"></bt></div></a>
                                         <a href="shipment.php"><div class="form-btn-cancel">Cancel Shipment</div></a>
                                 </form>

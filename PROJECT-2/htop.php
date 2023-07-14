@@ -1,7 +1,7 @@
 <div class="htleft">NEWS</div>
             <div class="htcenter">
-                <marquee behavior="rtl" direction="">OTP FRAUD AWARENESS PUBLIC NOTICE (6-MAY-2023)<br>
-                    Staying alert and aware is the simplest way to avoid OTP Fraud Airway courier India pvt ltd do not
+            <marquee direction="" scrolldelay="10" onmouseover=this.stop(); onmouseout="this.start();">OTP FRAUD AWARENESS PUBLIC NOTICE (6-JULY-2023)<br>
+                    Staying alert and aware is the simplest way to avoid OTP Fraud MBUS courier India pvt ltd do not
                     ask to share OTP/UPI pin. Any such request on phone will be treated has fraud call
                 </marquee>
             </div>

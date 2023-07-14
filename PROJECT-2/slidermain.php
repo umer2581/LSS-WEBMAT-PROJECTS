@@ -1,3 +1,10 @@
+
+<?php
+     include('admin/config/connection.php');
+     $sql="select * from homeslider1";
+     $result=mysqli_query($conn,$sql)or die ("Table connectivity failed");
+?>
+
 <script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
                 <script type="text/javascript">
                     window.jssor_1_slider_init = function() {
@@ -93,25 +100,25 @@
                         <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
                     </div>
                     <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1400px;height:532px;overflow:hidden;">
-                        <div>
-                            <img data-u="image" src="images/slideraj2.jpg" />
+                        
+                    <?php
+                    while($row=mysqli_fetch_assoc($result))
+                      {
+                    ?>
+                     
+                         <div>
+                         <img src="gimages/<?php echo $row['filename'] ?>" height="100%" width="100%">
+                           
                         </div>
-                        <div>
-                            <img data-u="image" src="images/slideraj3.jpg" />
-                        </div>
-                        <div>
-                            <img data-u="image" src="images/slideraj7.jpeg" />
-                        </div>
-                        <div>
-                            <img data-u="image" src="images/slideraj8.jpeg" />
-                        </div>
-                        <div>
-                            <img data-u="image" src="images/sliderj5.jpeg" />
-                        </div>
-                        <div>
-                            <img data-u="image" src="images/sliderj4.jpeg" />
-                        </div>
-                    </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">responsive slider</a>
+
+                        <?php
+                            }
+                        ?>
+
+
+
+                        
+                        </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">responsive slider</a>
                     <!-- Bullet Navigator -->
                     <div data-u="navigator" class="jssorb053" style="position:absolute;bottom:16px;    left: -17.4138px;;;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
                         <div data-u="prototype" class="i" style="width:12px;height:12px;">

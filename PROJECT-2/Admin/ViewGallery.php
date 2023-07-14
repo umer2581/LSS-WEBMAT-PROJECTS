@@ -1,4 +1,5 @@
 <?php
+    include("config/session.php");
 include("config/connection.php");
 
 // Single delete functionality

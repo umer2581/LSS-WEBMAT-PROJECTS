@@ -1,4 +1,24 @@
-<!DOCTYPE html>
+<?php
+include("config/session.php");
+include("config/connection.php");
+if(isset($_POST['update'])){
+    $hubname=$_POST['ofname'];
+    $area=$_POST['ofarea'];
+    $date=$_POST['date'];
+    $time=$_POST['time'];
+    $waybillno=$_POST['ofway'];
+    $pcs=$_POST['ofpcs'];
+    $consig=$_POST['ofcons'];
+    $address=$_POST['ofadd'];
+    $remarks=$_POST['ofrmk'];
+
+    $sql="INSERT INTO outdel (`id`,`hubname`,`area`,`date`,`time`,`waybillno`,`pcs`,`consig`,`address`,`remarks`) VALUES ('','$hubname','$area','$date','$time','$waybillno','$pcs','$consig','$address','$remarks')";
+
+    $result=mysqli_query($conn,$sql);   
+    
+
+}
+?>
 <html>
 
 <head>
@@ -30,6 +50,7 @@
                     <i class="fas fa-info-circle" style="font-size: 24px; color: red;"></i> Out For Delivery
                 </div>
             </div>
+            <form action="" method="post">
             <div class="hub-inscan" style="height:100px; border:none;">
                 <div class="hub-left" style="height:100px; border:none;">
                     <div class="h1-left"> Code/ Name ( Hub ) <br> <input type="text" name="ofname"
@@ -67,7 +88,7 @@
                             });
                         </script>
                         <input type="text" id="time-input" 
-                            style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
+                         name="time"   style="width:120px; height:20px; margin-top:10px; background-color:lightblue; border-radius:5px; font-weight:bolder;">
                     </div>
                 </div>
 
@@ -99,8 +120,9 @@
 
         </div>
         
-                <button class="red-button">Update</button>
+        <input type="submit" name="update" value="update" class="red-button">
             <button class="red-button">Cancel</button>
+            </form>
 
 
 

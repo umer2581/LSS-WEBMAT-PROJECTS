@@ -1,4 +1,9 @@
+<?php
 
+    include("config/session.php");
+    include("config/connection.php");
+
+?>
 <html>
 <head>
     <title>Admin Panel</title>

@@ -28,7 +28,11 @@
       transform: scale(0.8);
       transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
-
+    .slide img {
+    width: 339px;
+    /* border-radius: 11px; */
+    height: 205px;
+     }
     .slide.active {
       opacity: 1;
       transform: scale(1);
@@ -38,7 +42,7 @@
       display: flex;
       justify-content: center;
       position: absolute;
-      bottom: 10px;
+      bottom: 237px;
       left: 0;
       right: 0;
     }
@@ -131,7 +135,7 @@
       cursor: pointer;
       transition: background-color 0.3s ease-in-out;
       position: absolute;
-      top: calc(50% - 15px);
+      top: calc(24% - 15px);
     }
 
     .slider-side-nav-left {
@@ -165,20 +169,20 @@
   <div class="slider">
     <div class="slider-container">
       <div class="slide active fade-in">
-        <img src="images/clockback.jpeg" height="100%" width="100%" alt="Slide 1">
+        <img src="images/clockback.jpeg" height="205px" width="339px" alt="Slide 1">
       </div>
       <div class="slide fade-in">
-      <img src="images/s2aj4.jpeg" height="100%" width="100%" alt="Slide 1">
+      <img src="images/s2aj4.jpeg"height="205px" width="339px" alt="Slide 1">
       </div>
       <div class="slide fade-in">
-      <img src="images/s2aj1.jpeg" height="100%" width="100%" alt="Slide 1">
+      <img src="images/s2aj1.jpeg" height="205px" width="339px" alt="Slide 1">
 
       </div>
       <div class="slide fade-in">
-      <img src="images/s2aj2.webp" height="100%" width="100%" alt="Slide 1">
+      <img src="images/s2aj2.webp"height="205px" width="339px" alt="Slide 1">
       </div>
       <div class="slide fade-in">
-      <img src="images/clockback.jpeg" height="100%" width="100%" alt="Slide 1">
+      <img src="images/clockback.jpeg"height="205px" width="339px" alt="Slide 1">
       </div>
     </div>
     <div class="slider-nav">
